@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h1>Medium</h1>
+      <hr color="black" size="1px" />
+      <h2>Discover Stories,Articles and Research work from gla Students.</h2>
+    </div>
+
+    <button class="light-blue" id="add-article">
+      <a style="text-decoration: none" href="/comments/new">Add New Article</a>
+    </button>
+
+    <ul>
+      <% for(let comment of comments){%>
+      <li>
+        <p><strong><%= comment.username %> </strong></p>
+        <p><%= comment.text %></p>
+        <button class="blue">
+          <a style="text-decoration: none" href="/comments/<%= comment.id %>"
+            >Read More</a
+          >
+        </button>
+        <button class="light-blue">
+          <a
+            style="text-decoration: none"
+            href="/comments/<%= comment.id %>/edit "
+            >Edit</a
+          >
+        </button>
+        <form action="/comments/<%=comment.id%>?_method=DELETE" method="POST">
+          <button class="red-button">Delete</button>
+        </form>
+      </li>
+      <% }%>
+    </ul>
+  </body>
+</html>

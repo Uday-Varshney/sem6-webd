@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <h1>New Article</h1>
+
+    <form action="/comments" method="POST">
+      <label class="title" for="username">Title</label>
+      <br />
+      <input type="text" name="username" class="input-len" />
+      <br />
+      <label class="discription" for="text">Discription</label>
+      <br />
+      <input type="text" name="text" id="discription" class="input-len" />
+      <br />
+      <label class="makedown" for="text">Makedown</label>
+      <br />
+      <input type="text" name="text" class="input-len" />
+      <br />
+      <button class="grey" type="submit">Cancel</button>
+      <button class="light-blue" type="submit">Save</button>
+    </form>
+  </body>
+</html>
